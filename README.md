@@ -10,7 +10,7 @@ An interactive 3D badge component built with React Three Fiber that demonstrates
 
 ## Demo
 
-![Demo Video](static/test.mp4)
+![Demo Video](static/test.gif)
 
 ## Technologies Used
 
