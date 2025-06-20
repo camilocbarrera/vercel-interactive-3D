@@ -9,6 +9,13 @@ import Band from "./Band";
 export default function Scene3D() {
   const { debug } = useControls({ debug: false });
 
+  // Simple name controls
+  const cardData = useControls("Card Info", {
+    name: { value: "Guillermo Rauch" },
+    title: { value: "CEO" },
+    company: { value: "Vercel" },
+  });
+
   return (
     <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
       <ambientLight intensity={Math.PI} />
@@ -18,7 +25,15 @@ export default function Scene3D() {
         gravity={[0, -40, 0]}
         timeStep={1 / 60}
       >
-        <Band />
+        <Band 
+          cardData={{
+            ...cardData,
+            namePosition: [0, 0.3, 0.1],
+            titlePosition: [0, -0.1, 0.1],
+            companyPosition: [0, -0.4, 0.1],
+            fontSize: 0.08
+          }}
+        />
       </Physics>
       <Environment background blur={0.75}>
         <color attach="background" args={["black"]} />

@@ -1,9 +1,11 @@
-import Scene3D from "./components/Scene3D";
+"use client";
+
+import CardWithPositionControls from "./components/CardWithPositionControls";
 
 export default function Home() {
   return (
     <div className="w-full h-screen">
-      <Scene3D />
+      <CardWithPositionControls />
     </div>
   );
 }
