@@ -1,11 +1,12 @@
 "use client";
 
-import CardWithPositionControls from "./components/CardWithPositionControls";
+import CtwTestLanding from "./components/CtwTestLanding";
+
 
 export default function Home() {
   return (
     <div className="w-full h-screen">
-      <CardWithPositionControls />
+      <CtwTestLanding />
     </div>
   );
 }
